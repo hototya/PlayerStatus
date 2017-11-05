@@ -1,0 +1,19 @@
+name: PlayerStatus
+main: hototya\player\PlayerStatus
+version: 1.0.0
+api: 
+  - 3.0.0
+  - 3.0.0-ALPHA9
+load: POSTWORLD
+website: https://github.com/hototya/PlayerStatus
+author: hototya
+commands:
+  ps:
+    description: PlayerStatus用コマンド
+    usage: /ps <status | comment> [name | message]
+    permission: playerstatus.command.ps
+
+permissions:
+  playerstatus.command.ps:
+    default: true
+    description: permission that allows player to use /ps
