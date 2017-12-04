@@ -23,6 +23,7 @@ class PlayerStatus extends PluginBase implements Listener, CommandExecutor
 
     public function onEnable()
     {
+    	if (!file_exists($this->getDataFolder())) mkdir($this->getDataFolder(), 0744, true);
         $this->db = new DataBase($this->getDataFolder() . 'playerdata.db');
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
